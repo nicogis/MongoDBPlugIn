@@ -1,0 +1,35 @@
+﻿<UserControl x:Class="MongoDBPluginUI.MongoDbBrowser"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MongoDBPluginUI"
+             mc:Ignorable="d" d:DesignWidth="450" d:DesignHeight="174">
+    <Grid Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="35"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <local:GenericBrowser DataContext="{Binding Path=MongoDbConnInfo}" Grid.Column="0" Grid.Row="0"/>
+        <Border BorderBrush="Black" Margin="5" Grid.Row="1" Grid.Column="0" >
+            <Grid Margin="5" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="110"/>
+                    <ColumnDefinition Width="230"/>
+                    <ColumnDefinition Width="20*" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="35"/>
+                    <RowDefinition Height="35"/>
+                </Grid.RowDefinitions>
+                <Label FontWeight="Bold" Grid.Row="0" Grid.Column="0">MongoDB Server:</Label>
+                <TextBox x:Name="Server" Margin="5" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=ServerText}" />
+                <Label FontWeight="Bold" Grid.Row="1" Grid.Column="0">Database:</Label>
+                <TextBox x:Name="Database" Margin="5" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Text="{Binding Path=DatabaseText}" />
+            </Grid>
+        </Border>
+    </Grid>
+</UserControl>
