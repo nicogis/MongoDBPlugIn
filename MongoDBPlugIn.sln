@@ -13,6 +13,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBCommands", "MongoDBC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBPluginUI", "MongoDBPluginUI\MongoDBPluginUI.csproj", "{1493A722-9124-49E4-A34E-8C51A6ADDFB5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6D96885E-80E8-4EDB-9037-587B6596DD7E}"
+	ProjectSection(SolutionItems) = preProject
+		MongoConnection.PNG = MongoConnection.PNG
+		Readme.md = Readme.md
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
