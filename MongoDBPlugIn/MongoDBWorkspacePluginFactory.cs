@@ -293,7 +293,7 @@ namespace MongoDBPlugIn
         public string get_WorkspaceDescription(bool plural)
         {
             if (plural)
-                return "MongoDB repostories";
+                return "MongoDB repositories";
             else
                 return "MongoDB repository";
         }
